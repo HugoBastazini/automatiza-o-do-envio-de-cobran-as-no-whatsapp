@@ -42,7 +42,7 @@ class Widgets():
         self.lbTitulo = Label(self.frame1, text="CONSTRUVIDA", background="#DCDCDC", font=("Arial", 20))
         self.lbTitulo.place(relx=0.23, rely=0.003)
         self.etBusca = Entry(self.frame1)
-        self.etBusca.place(relx=0.67, rely=0.03, relwidth=0.2)
+        self.etBusca.place(relx=0.67, rely=0.047, relwidth=0.2)
         self.Logo = Image.open("src/gui/imgs/LOGO X (1).png")
         self.Logo = self.Logo.resize((420,350))
         self.img = ImageTk.PhotoImage(self.Logo)
