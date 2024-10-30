@@ -1,9 +1,11 @@
 from tkinter import *
+from widgets import Widgets
 
 root = Tk()
 
 class Application():
     def __init__(self):
+        self.widgets = Widgets(root)
         self.root = root 
         self.Tela()
         root.mainloop()
