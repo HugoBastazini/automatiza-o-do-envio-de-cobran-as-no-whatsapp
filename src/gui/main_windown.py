@@ -5,10 +5,10 @@ root = Tk()
 
 class Application():
     def __init__(self):
+        self.widgets = Widgets(root)
         self.root = root 
         self.Tela()
         root.mainloop()
-        widgets = Widgets(root)
     def Tela(self):
         self.root.title("Automação de Mensagens")
         self.root.configure(background="#191970")
