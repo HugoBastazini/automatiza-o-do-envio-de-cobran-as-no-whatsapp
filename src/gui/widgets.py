@@ -30,12 +30,8 @@ class Widgets():
         self.lbLink.place(relx=0.35, rely=0.13)
         self.etLink = Entry(self.frame1)
         self.etLink.place(relx=0.35, rely=0.23)
-        self.lbImgAprovada = Label(self.frame1, text="", background="#DCDCDC")
-        self.lbImgAprovada.place(relx=0.53, rely=0.02)
     def upload_imagem(self):
         caminho_imagem = filedialog.askopenfilename(
             title="Selecione uma imagem para upload",
             filetypes=[("Arquivos de imagem", "*.jpg *.jpeg *.png *.bmp *.gif")]
         )
-        if caminho_imagem:
-            self.lbImgAprovada.config(text="Imagem selecionada com sucesso!")
