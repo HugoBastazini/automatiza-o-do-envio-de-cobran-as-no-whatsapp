@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from PIL import Image, ImageTk
 
 class Widgets():
     def __init__(self, root):
@@ -42,6 +43,11 @@ class Widgets():
         self.lbTitulo.place(relx=0.23, rely=0.003)
         self.etBusca = Entry(self.frame1)
         self.etBusca.place(relx=0.67, rely=0.03, relwidth=0.2)
+        self.Logo = Image.open("src/gui/imgs/LOGO X (1).png")
+        self.Logo = self.Logo.resize((400,300))
+        self.img = ImageTk.PhotoImage(self.Logo)
+        self.lbImg = Label(self.frame1, image=self.img, background="#DCDCDC")
+        self.lbImg.place(relx=0.64, rely=0.2)
     def upload_imagem(self):
         caminho_imagem = filedialog.askopenfilename(
             title="Selecione uma imagem para upload",
