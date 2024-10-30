@@ -1,4 +1,5 @@
 from tkinter import *
+from widgets import Widgets
 
 root = Tk()
 
@@ -7,6 +8,7 @@ class Application():
         self.root = root 
         self.Tela()
         root.mainloop()
+        widgets = Widgets(root)
     def Tela(self):
         self.root.title("Automação de Mensagens")
         self.root.configure(background="#191970")
