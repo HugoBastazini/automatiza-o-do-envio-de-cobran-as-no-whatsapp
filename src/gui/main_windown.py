@@ -12,8 +12,8 @@ class Application():
     def Tela(self):
         self.root.title("Automação de Mensagens")
         self.root.configure(background="#398385")
-        self.root.geometry("1280x720")
-        self.root.resizable(True, True)
-        self.root.minsize(width=1280, height=720)
+        root.geometry("1366x768")
+        root.minsize("740","580")
+
 
 Application()
