@@ -4,7 +4,6 @@ from PIL import Image, ImageTk
 from tkinter import ttk
 from funcs import Funcs
 
-
 class Widgets(Funcs):
     def __init__(self, root):
         self.root = root
