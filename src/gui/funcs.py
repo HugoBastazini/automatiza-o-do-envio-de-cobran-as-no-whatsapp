@@ -2,6 +2,13 @@ from tkinter import *
 from tkinter import filedialog
 from PIL import Image, ImageTk
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from services.data import Bd
+
 class Funcs():
     def Limpar(self):
         self.txtMensagem.delete("1.0", END)
