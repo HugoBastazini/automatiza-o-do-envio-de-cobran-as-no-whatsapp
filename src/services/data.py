@@ -25,4 +25,3 @@ class Bd:
         print("Banco de dados criado com sucesso.")
         
         self.desconectarBd()
-        print("Conexão encerrada.")
