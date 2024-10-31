@@ -2,8 +2,22 @@ from tkinter import *
 from tkinter import filedialog
 from PIL import Image, ImageTk
 from tkinter import ttk
+from funcs import Funcs
 
-class Widgets():
+class Funcs():
+    def Limpar(self):
+        self.txtMensagem.delete("1.0", END)
+        self.etLink.delete(0, END)
+        self.etNome.delete(0, END)
+        self.etData.delete(0, END)
+        self.etBusca.delete(0, END)
+    def upload_imagem(self):
+        caminho_imagem = filedialog.askopenfilename(
+            title="Selecione uma imagem para upload",
+            filetypes=[("Arquivos de imagem", "*.jpg *.jpeg *.png *.bmp *.gif")]
+        )
+
+class Widgets(Funcs):
     def __init__(self, root):
         self.root = root
         self.Frames()
@@ -18,7 +32,7 @@ class Widgets():
         self.frame2.place(relx=0.01, rely=0.70, relwidth=0.98, relheight=0.28)
 
     def Botoes(self):
-        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'), command = self.Limpar)
         self.botaoLimpar.place(relx=0.01, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'))
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
@@ -82,9 +96,3 @@ class Widgets():
         self.scroolLista = Scrollbar(self.frame2, orient='vertical')
         self.listaClientes.configure(yscroll=self.scroolLista.set)
         self.scroolLista.place(relx=0.98, rely=0, relwidth=0.02, relheight=1)
-
-    def upload_imagem(self):
-        caminho_imagem = filedialog.askopenfilename(
-            title="Selecione uma imagem para upload",
-            filetypes=[("Arquivos de imagem", "*.jpg *.jpeg *.png *.bmp *.gif")]
-        )
