@@ -18,14 +18,16 @@ class Widgets():
         self.frame2.place(relx=0.01, rely=0.70, relwidth=0.98, relheight=0.28)
 
     def Botoes(self):
-        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#20B2AA", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'))
         self.botaoLimpar.place(relx=0.01, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#20B2AA", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'))
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, bg="#20B2AA", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'))
         self.botaoBuscar.place(relx=0.89, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoUpload = Button(self.frame1, text="IMAGEM", command=self.upload_imagem, bd=3, bg="#20B2AA", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoUpload = Button(self.frame1, text="IMAGEM", command=self.upload_imagem, bd=3, font=('verdana', 12, 'bold'))
         self.botaoUpload.place(relx=0.53, rely=0.01, relwidth=0.1, relheight=0.08)
+        self.botaoEnviar = Button(self.frame1, text="ENVIAR", bd=3, font=('verdana', 12, 'bold'))
+        self.botaoEnviar.place(relx=0.35, rely=0.77, relwidth=0.1, relheight=0.06)
 
     def LabelsEntry(self):
         self.lbMensagem = Label(self.frame1, text="Mensagem", background="#DCDCDC")
