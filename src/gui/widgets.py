@@ -22,9 +22,9 @@ class Widgets(Funcs):
         self.frame2.place(relx=0.01, rely=0.70, relwidth=0.98, relheight=0.28)
 
     def Botoes(self):
-        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'), command = self.Limpar)
+        self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'),activebackground="#800000", activeforeground="white" ,command = self.Limpar)
         self.botaoLimpar.place(relx=0.01, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'), command = self.Add)
+        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'),activebackground="#008000", activeforeground="white" , command = self.Add)
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'), command = self.Buscar)
         self.botaoBuscar.place(relx=0.89, rely=0.01, relwidth=0.1, relheight=0.08)
