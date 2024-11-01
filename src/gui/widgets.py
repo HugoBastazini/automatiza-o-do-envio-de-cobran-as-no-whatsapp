@@ -12,6 +12,8 @@ class Widgets(Funcs):
         self.LabelsEntry()
         self.TreeView()
         self.Select()
+        self.Menus()
+        self.Buscar
 
     def Frames(self):
         self.frame1 = Frame(self.root, bd=2, highlightbackground="black", highlightthickness=2, background="#DCDCDC")
@@ -24,7 +26,7 @@ class Widgets(Funcs):
         self.botaoLimpar.place(relx=0.01, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'), command = self.Add)
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'))
+        self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'), command = self.Buscar)
         self.botaoBuscar.place(relx=0.89, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoUpload = Button(self.frame1, text="IMAGEM", command=self.upload_imagem, bd=3, font=('verdana', 12, 'bold'))
         self.botaoUpload.place(relx=0.53, rely=0.01, relwidth=0.1, relheight=0.08)
