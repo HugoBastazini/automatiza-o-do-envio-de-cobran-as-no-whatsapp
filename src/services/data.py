@@ -13,11 +13,9 @@ class Bd:
         print("Conectando ao banco de dados...")
         
         self.cursor.execute("""
-            CREATE TABLE IF NOT EXISTS clientes (
-                nome CHAR(40) PRIMARY KEY,
-                numero INTEGER NOT NULL,
-                telefone INTEGER NOT NULL,
-                divida INTEGER NOT NULL
+            CREATE TABLE IF NOT EXISTS mensagens (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            mensagem VARCHAR(255) UNIQUE
             );
         """)
         

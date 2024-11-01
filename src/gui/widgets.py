@@ -11,6 +11,7 @@ class Widgets(Funcs):
         self.Botoes()
         self.LabelsEntry()
         self.TreeView()
+        self.Select()
 
     def Frames(self):
         self.frame1 = Frame(self.root, bd=2, highlightbackground="black", highlightthickness=2, background="#DCDCDC")
@@ -21,7 +22,7 @@ class Widgets(Funcs):
     def Botoes(self):
         self.botaoLimpar = Button(self.frame1, text="LIMPAR", bd=3, bg="#8B0000", fg="white", font=('verdana', 12, 'bold'), command = self.Limpar)
         self.botaoLimpar.place(relx=0.01, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'))
+        self.botaoSalvar = Button(self.frame1, text="SALVAR", bd=3, bg="#228B22", fg="white", font=('verdana', 12, 'bold'), command = self.Add)
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'))
         self.botaoBuscar.place(relx=0.89, rely=0.01, relwidth=0.1, relheight=0.08)
@@ -67,16 +68,10 @@ class Widgets(Funcs):
         
         self.listaClientes = ttk.Treeview(self.frame2, height= 3, column=("col1","col2", "col3", "col4", "col5"))
         self.listaClientes.heading("#0", text="")
-        self.listaClientes.heading("#1", text="Cliente")
-        self.listaClientes.heading("#2", text="Numero")
-        self.listaClientes.heading("#3", text="PDF")
-        self.listaClientes.heading("#4", text="DvTotal")
+        self.listaClientes.heading("#1", text="MENSAGENS")
 
         self.listaClientes.column('#0', width=0)
-        self.listaClientes.column('#1', width=200)
-        self.listaClientes.column('#2', width=400)
-        self.listaClientes.column('#3', width=500)
-        self.listaClientes.column('#4', width=200)
+        self.listaClientes.column('#1', width=1000)
 
         self.listaClientes.place(relx=0, rely=0, relwidth=0.98, relheight=1)
 

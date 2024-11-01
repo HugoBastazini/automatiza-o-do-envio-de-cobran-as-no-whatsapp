@@ -1,9 +1,7 @@
 from tkinter import *
 import sys
 import os
-
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from widgets import Widgets
 from services.data import Bd
 
@@ -24,4 +22,7 @@ class Application:
         root.geometry("1366x768")
         root.minsize(740, 580)
 
+if __name__ == "__main__":
+    bd = Bd()
+    bd.criarBd()
 Application()
