@@ -11,7 +11,6 @@ from services.data import Bd
 
 class Funcs(Bd):
     def Limpar(self):
-        # Limpa os campos de texto e entradas
         self.txtMensagem.delete("1.0", END)
         self.etLink.delete(0, END)
         self.etNome.delete(0, END)
