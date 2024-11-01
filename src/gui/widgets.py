@@ -28,7 +28,7 @@ class Widgets(Funcs):
         self.botaoSalvar.place(relx=0.12, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoBuscar = Button(self.frame1, text="BUSCAR", bd=3, font=('verdana', 12, 'bold'), command = self.Buscar)
         self.botaoBuscar.place(relx=0.89, rely=0.01, relwidth=0.1, relheight=0.08)
-        self.botaoUpload = Button(self.frame1, text="IMAGEM", command=self.upload_imagem, bd=3, font=('verdana', 12, 'bold'))
+        self.botaoUpload = Button(self.frame1, text="RELATORIO", command=self.upload_imagem, bd=3, font=('verdana', 12, 'bold'))
         self.botaoUpload.place(relx=0.53, rely=0.01, relwidth=0.1, relheight=0.08)
         self.botaoEnviar = Button(self.frame1, text="ENVIAR", bd=3, font=('verdana', 12, 'bold'))
         self.botaoEnviar.place(relx=0.35, rely=0.77, relwidth=0.1, relheight=0.06)

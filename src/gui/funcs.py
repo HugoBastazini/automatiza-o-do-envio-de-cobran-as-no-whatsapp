@@ -78,7 +78,7 @@ class Funcs(Bd):
 
         for mensagem in buscaMensagem:
             self.listaClientes.insert("", END, values=mensagem)
-            
+
         self.etBusca.delete(0, END)
 
         self.desconectarBd()
