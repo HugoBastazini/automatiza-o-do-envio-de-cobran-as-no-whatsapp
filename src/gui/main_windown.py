@@ -19,7 +19,7 @@ class Application:
     def Tela(self):
         self.root.title("Automação de Mensagens")
         self.root.configure(background="#398385")
-        root.geometry("1366x768")
+        root.geometry("800x600")
         root.minsize(740, 580)
 
 if __name__ == "__main__":
