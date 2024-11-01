@@ -63,15 +63,22 @@ class Funcs(Bd):
     
     def Buscar(self):
         self.conectarBd()
+
         self.listaClientes.delete(*self.listaClientes.get_children())
+
         busca = self.etBusca.get() + "%"
+
         self.cursor.execute(
             """SELECT mensagem FROM mensagens
             WHERE mensagem LIKE ? ORDER BY mensagem ASC;""",
             (busca,)
         )
+
         buscaMensagem = self.cursor.fetchall()
+
         for mensagem in buscaMensagem:
             self.listaClientes.insert("", END, values=mensagem)
+            
         self.etBusca.delete(0, END)
+
         self.desconectarBd()
